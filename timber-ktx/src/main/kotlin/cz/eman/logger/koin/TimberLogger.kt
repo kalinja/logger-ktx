@@ -37,7 +37,7 @@ import timber.log.Timber
  */
 class TimberLogger(level: Level = Level.INFO) : Logger(level) {
 
-    override fun log(level: Level, msg: MESSAGE) {
+    override fun display(level: Level, msg: MESSAGE) {
         if (this.level <= level) {
             logOnLevel(msg)
         }
@@ -47,7 +47,9 @@ class TimberLogger(level: Level = Level.INFO) : Logger(level) {
         when (this.level) {
             Level.DEBUG -> Timber.tag(KOIN_TAG).d(msg)
             Level.INFO -> Timber.tag(KOIN_TAG).i(msg)
+            Level.WARNING -> Timber.tag(KOIN_TAG).w(msg)
             Level.ERROR -> Timber.tag(KOIN_TAG).e(msg)
+            Level.NONE -> {}
         }
     }
 }
@@ -60,6 +62,6 @@ class TimberLogger(level: Level = Level.INFO) : Logger(level) {
  * @author [Filip Šmíd](mailto:filip.smid@eman.cz)
  */
 fun KoinApplication.timberLogger(level: Level = Level.INFO): KoinApplication {
-    KoinApplication.logger = TimberLogger(level)
+    this.logger(TimberLogger(level))
     return this
 }

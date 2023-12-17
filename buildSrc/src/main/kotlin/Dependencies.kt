@@ -6,14 +6,14 @@ object Dependencies {
         const val appCompat = "1.0.0"
         const val constraintLayout = "1.1.2"
 
-        const val kotlin = "1.3.72"
-        const val dokka = "1.5.0"
+        const val kotlin = "1.9.10"
+        const val dokka = "1.9.10"
 
-        const val gradle = "6.2.2"
-        const val gradleBuildTools = "3.6.2"
+        const val gradle = "8.4"
+        const val gradleBuildTools = "8.1.4"
 
-        const val timber = "4.7.1"
-        const val koin = "2.0.1"
+        const val timber = "5.0.1"
+        const val koin = "3.5.0"
 
         const val junit = "4.12"
     }
@@ -24,14 +24,14 @@ object Dependencies {
         const val applicationId = "cz.eman.logger.sample"
 
         const val minSdk = 21
-        const val targetSdk = 28
-        const val compileSdk = 28
+        const val targetSdk = 34
+        const val compileSdk = 34
 
         const val versionCode = 1
 
         const val testInstrumentRunner = "androidx.test.runner.AndroidJUnitRunner"
-        val sourceCompatibilityJava = JavaVersion.VERSION_1_8
-        val targetCompatibilityJava = JavaVersion.VERSION_1_8
+        val sourceCompatibilityJava = JavaVersion.VERSION_17
+        val targetCompatibilityJava = JavaVersion.VERSION_17
     }
 
     /* =============================  BUILD-PLUGINS ======================= */

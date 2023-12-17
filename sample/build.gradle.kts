@@ -4,13 +4,15 @@ plugins {
 }
 
 android {
-    compileSdkVersion(Dependencies.Android.compileSdk)
+    namespace = "cz.eman.logger.sample"
+
+    compileSdk = Dependencies.Android.compileSdk
 
     defaultConfig {
         applicationId = Dependencies.Android.applicationId
 
-        minSdkVersion(Dependencies.Android.minSdk)
-        targetSdkVersion(Dependencies.Android.targetSdk)
+        minSdk = Dependencies.Android.minSdk
+        targetSdk = Dependencies.Android.targetSdk
 
         versionCode = Dependencies.Android.versionCode
         versionName = "${project.version}"
